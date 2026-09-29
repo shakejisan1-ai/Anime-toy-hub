@@ -1,149 +1,244 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anime Toy Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>Anime Toy Hub</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b0b12;
-      color: white;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    header {
-      padding: 20px;
-      text-align: center;
-      background: #151522;
-    }
+body{
+    font-family:Arial,sans-serif;
+    background:#080812;
+    color:white;
+}
 
-    header h1 {
-      font-size: 28px;
-    }
+header{
+    padding:22px 18px;
+    background:linear-gradient(135deg,#17102b,#090914);
+    border-bottom:1px solid #29243d;
+}
 
-    header p {
-      margin-top: 8px;
-      color: #aaa;
-    }
+.logo{
+    font-size:27px;
+    font-weight:bold;
+}
 
-    .search {
-      margin: 20px;
-    }
+.logo span{
+    color:#a855f7;
+}
 
-    .search input {
-      width: 100%;
-      padding: 14px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      font-size: 16px;
-    }
+.subtitle{
+    color:#aaa;
+    margin-top:7px;
+    font-size:14px;
+}
 
-    .title {
-      padding: 0 20px 15px;
-      font-size: 22px;
-    }
+.search{
+    padding:18px;
+}
 
-    .collection {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      padding: 0 20px 30px;
-    }
+.search input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    background:#171725;
+    color:white;
+    font-size:15px;
+}
 
-    .card {
-      background: #171724;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-    }
+.section{
+    padding:0 18px;
+    margin-top:8px;
+}
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+.section-title{
+    font-size:21px;
+    margin-bottom:14px;
+}
 
-    .card-info {
-      padding: 12px;
-    }
+.categories{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
 
-    .card-info h3 {
-      font-size: 17px;
-    }
+.category{
+    background:#171725;
+    border:1px solid #2d2840;
+    padding:10px 14px;
+    border-radius:20px;
+    white-space:nowrap;
+    font-size:14px;
+}
 
-    .card-info p {
-      color: #aaa;
-      margin-top: 5px;
-      font-size: 14px;
-    }
+.category:hover{
+    background:#7c3aed;
+}
 
-    .btn {
-      display: block;
-      margin-top: 10px;
-      padding: 9px;
-      text-align: center;
-      background: #7c3aed;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
+.collection{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #151522;
-      color: #888;
+.card{
+    background:#141420;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid #252438;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.info{
+    padding:12px;
+}
+
+.info h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.anime{
+    color:#a855f7;
+    font-size:13px;
+}
+
+.status{
+    color:#72e06a;
+    font-size:12px;
+    margin-top:7px;
+}
+
+.button{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    padding:9px;
+    background:#7c3aed;
+    border-radius:9px;
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+}
+
+footer{
+    margin-top:35px;
+    padding:25px;
+    text-align:center;
+    background:#11111c;
+    color:#777;
+    font-size:13px;
+}
+
+@media(max-width:350px){
+    .collection{
+        grid-template-columns:1fr;
     }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🎌 Anime Toy Hub</h1>
-    <p>Explore Your Favorite Anime Toys</p>
-  </header>
+<header>
+    <div class="logo">🎌 Anime <span>Toy Hub</span></div>
+    <div class="subtitle">Anime Figure & Toy Collection</div>
+</header>
 
-  <div class="search">
+<div class="search">
     <input type="text" placeholder="🔍 Search Anime Toy...">
-  </div>
+</div>
 
-  <h2 class="title">🔥 Latest Collection</h2>
+<div class="section">
 
-  <div class="collection">
+    <h2 class="section-title">🎌 Anime Categories</h2>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80">
-      <div class="card-info">
-        <h3>Sung Jin-Woo</h3>
-        <p>Solo Leveling</p>
-        <a href="#" class="btn">View Toy</a>
-      </div>
+    <div class="categories">
+        <div class="category">⚔️ Solo Leveling</div>
+        <div class="category">🍥 Naruto</div>
+        <div class="category">👹 Jujutsu Kaisen</div>
+        <div class="category">☠️ One Piece</div>
+        <div class="category">🗡️ Demon Slayer</div>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=80">
-      <div class="card-info">
-        <h3>Anime Figure</h3>
-        <p>Jujutsu Kaisen</p>
-        <a href="#" class="btn">View Toy</a>
-      </div>
+</div>
+
+<div class="section">
+
+    <h2 class="section-title">🔥 Featured Toys</h2>
+
+    <div class="collection">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=80">
+
+            <div class="info">
+                <h3>Sung Jin-Woo</h3>
+                <div class="anime">Solo Leveling</div>
+                <div class="status">● Available</div>
+                <a href="#" class="button">View Details</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80">
+
+            <div class="info">
+                <h3>Anime Figure</h3>
+                <div class="anime">Jujutsu Kaisen</div>
+                <div class="status">● Available</div>
+                <a href="#" class="button">View Details</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1594736797933-d0e501ba2fe6?auto=format&fit=crop&w=600&q=80">
+
+            <div class="info">
+                <h3>Naruto</h3>
+                <div class="anime">Naruto</div>
+                <div class="status">● Available</div>
+                <a href="#" class="button">View Details</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?auto=format&fit=crop&w=600&q=80">
+
+            <div class="info">
+                <h3>Luffy</h3>
+                <div class="anime">One Piece</div>
+                <div class="status">● Available</div>
+                <a href="#" class="button">View Details</a>
+            </div>
+        </div>
+
     </div>
 
-  </div>
+</div>
 
-  <footer>
-    © 2026 Anime Toy Hub
-  </footer>
+<footer>
+    © 2026 Anime Toy Hub<br>
+    Anime Figure & Toy Collection
+</footer>
 
 </body>
 </html>
