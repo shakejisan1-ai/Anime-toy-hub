@@ -1,1 +1,149 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Toy Hub</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b12;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #151522;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #aaa;
+    }
+
+    .search {
+      margin: 20px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .title {
+      padding: 0 20px 15px;
+      font-size: 22px;
+    }
+
+    .collection {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 0 20px 30px;
+    }
+
+    .card {
+      background: #171724;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-info {
+      padding: 12px;
+    }
+
+    .card-info h3 {
+      font-size: 17px;
+    }
+
+    .card-info p {
+      color: #aaa;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: block;
+      margin-top: 10px;
+      padding: 9px;
+      text-align: center;
+      background: #7c3aed;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #151522;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🎌 Anime Toy Hub</h1>
+    <p>Explore Your Favorite Anime Toys</p>
+  </header>
+
+  <div class="search">
+    <input type="text" placeholder="🔍 Search Anime Toy...">
+  </div>
+
+  <h2 class="title">🔥 Latest Collection</h2>
+
+  <div class="collection">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80">
+      <div class="card-info">
+        <h3>Sung Jin-Woo</h3>
+        <p>Solo Leveling</p>
+        <a href="#" class="btn">View Toy</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?auto=format&fit=crop&w=600&q=80">
+      <div class="card-info">
+        <h3>Anime Figure</h3>
+        <p>Jujutsu Kaisen</p>
+        <a href="#" class="btn">View Toy</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Anime Toy Hub
+  </footer>
+
+</body>
+</html>
